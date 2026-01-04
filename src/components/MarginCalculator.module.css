@@ -1,0 +1,171 @@
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 2.5rem 2rem;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  max-width: 640px;
+  width: 100%;
+}
+
+.title {
+  margin: 0 0 2rem 0;
+  font-size: 2rem;
+  font-weight: 600;
+  text-align: center;
+  background: linear-gradient(135deg, #646cff 0%, #7c7cff 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.formGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.25rem;
+}
+
+.inputGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+.label {
+  font-size: 0.95rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  color: rgba(255, 255, 255, 0.85);
+  text-align: left;
+}
+
+.input {
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  border: 2px solid rgba(255, 255, 255, 0.15);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.08);
+  color: rgba(255, 255, 255, 0.9);
+  font-family: inherit;
+  transition: all 0.3s ease;
+}
+
+.input:focus {
+  outline: none;
+  border-color: #646cff;
+  background: rgba(100, 108, 255, 0.1);
+  box-shadow: 0 0 0 3px rgba(100, 108, 255, 0.2);
+}
+
+.input::placeholder {
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.error {
+  color: #ff6b6b;
+  font-size: 0.9rem;
+  margin: 1rem 0;
+  padding: 0.75rem 1rem;
+  background: rgba(255, 107, 107, 0.1);
+  border-left: 3px solid #ff6b6b;
+  border-radius: 4px;
+  text-align: left;
+}
+
+.results {
+  margin-top: 2rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.resultItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  margin-bottom: 0.75rem;
+  background: rgba(100, 108, 255, 0.08);
+  border-radius: 8px;
+  border-left: 3px solid #646cff;
+}
+
+.resultItem:last-child {
+  margin-bottom: 0;
+}
+
+.resultItem .label {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 0.95rem;
+}
+
+.value {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #7c7cff;
+  font-family: 'Monaco', 'Menlo', 'Ubuntu Mono', monospace;
+}
+
+@media (max-width: 600px) {
+  .card {
+    padding: 2rem 1.25rem;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .value {
+    font-size: 1.25rem;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  .card {
+    background: rgba(0, 0, 0, 0.03);
+    border-color: rgba(0, 0, 0, 0.1);
+  }
+
+  .label {
+    color: rgba(0, 0, 0, 0.7);
+  }
+
+  .input {
+    background: rgba(0, 0, 0, 0.05);
+    border-color: rgba(0, 0, 0, 0.1);
+    color: rgba(0, 0, 0, 0.9);
+  }
+
+  .input::placeholder {
+    color: rgba(0, 0, 0, 0.4);
+  }
+
+  .input:focus {
+    background: rgba(100, 108, 255, 0.08);
+    border-color: #646cff;
+  }
+
+  .error {
+    background: rgba(255, 107, 107, 0.08);
+  }
+
+  .resultItem {
+    background: rgba(100, 108, 255, 0.06);
+  }
+
+  .resultItem .label {
+    color: rgba(0, 0, 0, 0.6);
+  }
+}
